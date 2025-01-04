@@ -1,22 +1,34 @@
 #include <iostream>
-
+#include<vector>
 using namespace std;
 
-int N;
-string command[10000];
-int num[10000];
+ 
 
 int main() {
-    cin >> N;
-
-    for (int i = 0; i < N; i++) {
-        cin >> command[i];
-        if (command[i] == "push_back" || command[i] == "get") {
-            cin >> num[i];
+    int N; 
+    string str; 
+    vector<int> v; 
+    cin >> N; 
+    int k; 
+    for(int i = 0; i<N; i++){
+        cin >> str; 
+        if(str =="push_back"){
+            cin >> k; 
+            v.push_back(k);
         }
+        else if(str=="pop_back"){
+            v.pop_back(); 
+        }
+        else if(str=="size"){
+            cout << v.size() << "\n"; 
+        }
+
+        else if(str=="get"){
+            cin >>k; 
+            cout << v[k-1] << "\n"; 
+        }
+          
+
     }
-
-    // Write your code here!
-
     return 0;
 }

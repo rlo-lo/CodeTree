@@ -9,7 +9,7 @@ int arr[MAX_N];
 
 void sort() {
    
-    for(int i = 0; i< arr.size ; i++){
+    for(int i = 0; i< arr.size() ; i++){
         int j = i-1; 
         int key = arr[i]; 
         while(j>=0 && arr[j] > key ){

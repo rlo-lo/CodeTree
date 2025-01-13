@@ -1,14 +1,15 @@
 #include <iostream>
-
 #define MAX_N 100
 
 using namespace std;
 
 int n;
 int arr[MAX_N];
+
+
 void sort() {
-    int size = arr.size(); 
-    for(int i = 0; i< size ; i++){
+   
+    for(int i = 0; i< arr.size ; i++){
         int j = i-1; 
         int key = arr[i]; 
         while(j>=0 && arr[j] > key ){
